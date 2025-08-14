@@ -1,0 +1,36 @@
+
+# Editor
+.vscode/
+
+# Standard Expo/React Native ignores
+node_modules/
+dist/
+build/
+coverage/
+.expo/
+.expo-shared/
+.expo/web-build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-error.log*
+.pnpm-debug.log*
+.env
+.env*.local
+.DS_Store
+android/.gradle/
+android/app/build/
+android/build/
+ios/build/
+ios/Pods/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcshareddata/
+*.xcuserdatad
+*.xcuserdata/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
