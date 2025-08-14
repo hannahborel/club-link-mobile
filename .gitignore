@@ -1,36 +1,37 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# Editor
-.vscode/
-
-# Standard Expo/React Native ignores
+# dependencies
 node_modules/
-dist/
-build/
-coverage/
+
+# Expo
 .expo/
-.expo-shared/
-.expo/web-build/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-error.log*
-.pnpm-debug.log*
-.env
-.env*.local
-.DS_Store
-android/.gradle/
-android/app/build/
-android/build/
-ios/build/
-ios/Pods/
-*.xcworkspace
-*.xcodeproj/project.xcworkspace/xcshareddata/
-*.xcuserdatad
-*.xcuserdata/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
-*.orig.*
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo

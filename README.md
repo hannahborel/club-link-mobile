@@ -1,66 +1,146 @@
-# club-link-mobile
+# Club Link Mobile
 
-![Node 20](https://img.shields.io/badge/node-20.x-43853d?logo=node.js&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-Managed_Workflow-000020?logo=expo&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-0.7x-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
-![React Navigation](https://img.shields.io/badge/React_Navigation-6-CA4245)
-![RN Paper](https://img.shields.io/badge/React_Native_Paper-UI-6200EE)
-![NativeWind](https://img.shields.io/badge/NativeWind-Styling-38B2AC)
-![ESLint](https://img.shields.io/badge/ESLint-configured-4B32C3?logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-configured-ff69b4?logo=prettier&logoColor=white)
-![License](https://img.shields.io/badge/license-ISC-blue)
-![Issues](https://img.shields.io/github/issues/hannahborel/club-link-mobile)
-![Stars](https://img.shields.io/github/stars/hannahborel/club-link-mobile?style=social)
+A React Native mobile application for the Club Link luxury gym network platform. This app provides members with gym discovery, booking, and access management capabilities.
 
-Member-facing mobile app built with Expo.
+## Features
 
-## Tech Stack
+- **API Testing Interface**: Complete CRUD operations for testing database connectivity
+- **Health Monitoring**: Real-time API health status checking
+- **User Management**: Create, read, update, and delete user records
+- **Responsive Design**: Optimized for both iOS and Android platforms
+- **Modern UI**: Built with React Native Paper for consistent Material Design
 
-- Expo (React Native)
-- TypeScript
-- UI: React Native Paper + NativeWind
-- Navigation: React Navigation 6
-- Auth: Clerk
+## Prerequisites
 
-## Requirements
+- Node.js 18+ 
+- npm or yarn
+- Expo CLI (`npm install -g @expo/cli`)
+- iOS Simulator (for iOS development)
+- Android Studio & Emulator (for Android development)
 
-- Node 20 (see `.nvmrc`)
-- Expo CLI (installed globally or via npx)
+## Installation
 
-## Setup
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hannahborel/club-link-mobile.git
+   cd club-link-mobile
+   ```
 
-```bash
-nvm use
-npm install
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+## Development
+
+### Running the App
+
+- **iOS Simulator**: `npm run ios`
+- **Android Emulator**: `npm run android`
+- **Web Browser**: `npm run web`
+- **Expo Go App**: Scan QR code from `npm start`
+
+### Project Structure
+
+```
+src/
+├── App.tsx                 # Main application component
+├── components/             # Reusable UI components
+├── screens/                # Screen components
+├── navigation/             # Navigation configuration
+├── services/               # API services
+├── hooks/                  # Custom React hooks
+├── utils/                  # Utility functions
+└── types/                  # TypeScript type definitions
 ```
 
-## Scripts
+### Key Dependencies
+
+- **React Native**: Core mobile framework
+- **Expo**: Development platform and tools
+- **React Native Paper**: Material Design components
+- **React Navigation**: Navigation between screens
+
+## API Integration
+
+The mobile app connects to the Club Link API for all data operations. The current implementation includes:
+
+- **Health Check**: `/api/test-db` GET endpoint
+- **User CRUD**: Full Create, Read, Update, Delete operations
+- **Error Handling**: Comprehensive error management and user feedback
+
+### API Configuration
+
+The app automatically detects the platform and uses the appropriate API endpoint:
+- **iOS Simulator**: `http://localhost:3000`
+- **Android Emulator**: `http://10.0.2.2:3000`
+
+## Testing
+
+### Manual Testing
+
+1. **Start the API server** (club-link-api repository)
+2. **Launch the mobile app** using `npm start`
+3. **Test API connectivity** using the health check feature
+4. **Verify CRUD operations** by creating, editing, and deleting users
+
+### Test Scenarios
+
+- ✅ API health check functionality
+- ✅ User creation with validation
+- ✅ User editing and updates
+- ✅ User deletion with confirmation
+- ✅ Error handling and display
+- ✅ Loading states and feedback
+- ✅ Pull-to-refresh functionality
+
+## Building and Deployment
+
+### Development Build
 
 ```bash
-npm run lint    # ESLint across the repo
-npm run format  # Prettier format
+# iOS
+npx expo run:ios
+
+# Android
+npx expo run:android
 ```
 
-## Tooling
+### Production Build
 
-- ESLint (TypeScript, import, unused-imports)
-- Prettier (enforced via VSCode settings)
-- Husky + lint-staged (runs on pre-commit)
+```bash
+# Build for app stores
+eas build --platform all
+```
 
-## Project Structure (planned)
+## Troubleshooting
 
-- `src/screens` – screens
-- `src/components` – shared UI
-- `src/navigation` – navigation setup and types
-- `src/services` – API clients
-- `src/hooks` – custom hooks
-- `src/types` – shared types
+### Common Issues
 
-## Environment Variables
+1. **Metro bundler errors**: Clear cache with `npx expo start --clear`
+2. **API connection issues**: Verify API server is running on correct port
+3. **Platform-specific bugs**: Test on both iOS and Android simulators
 
-Will be added when app scaffold is created (Clerk keys, API base URL, etc.).
+### Debug Mode
+
+Enable debug mode by shaking the device or pressing `Cmd+D` (iOS) / `Cmd+M` (Android) in the simulator.
 
 ## Contributing
 
-Pre-commit hooks run lint-staged. Ensure a clean `npm run lint` and `npm run format` before pushing.
+1. Follow the established code style and patterns
+2. Test on both iOS and Android platforms
+3. Ensure all API integrations are working
+4. Update documentation for any new features
+
+## License
+
+This project is part of the Club Link platform and follows the same licensing terms.
+
+## Support
+
+For development support, refer to the main Club Link documentation repository.

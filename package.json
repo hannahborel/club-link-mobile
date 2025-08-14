@@ -1,43 +1,29 @@
 {
   "name": "club-link-mobile",
   "version": "1.0.0",
-  "description": "A mobile app to manage and grow the club link network",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "prepare": "husky"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hannahborel/club-link-mobile.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hannahborel/club-link-mobile/issues"
-  },
-  "homepage": "https://github.com/hannahborel/club-link-mobile#readme",
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,md,mdx,css,scss}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+  "dependencies": {
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/stack": "^7.4.7",
+    "expo": "~53.0.20",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-paper": "^5.14.5",
+    "react-native-safe-area-context": "^5.6.0",
+    "react-native-screens": "^4.14.1",
+    "react-native-vector-icons": "^10.3.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.33.0",
-    "@typescript-eslint/eslint-plugin": "^8.39.1",
-    "@typescript-eslint/parser": "^8.39.1",
-    "eslint": "^9.33.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-unused-imports": "^4.1.4",
-    "globals": "^16.3.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
-  }
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
 }
