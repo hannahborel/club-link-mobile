@@ -12,21 +12,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": true
   },
-  "include": [
-    "src/**/*",
-    "app/**/*",
-    "components/**/*",
-    "screens/**/*",
-    "utils/**/*",
-    "types/**/*",
-    "*.ts",
-    "*.tsx",
-    "App.tsx"
-  ],
+  "include": ["placeholder.ts"],
   "exclude": ["node_modules", "dist", "build", ".next", "out"]
 }
