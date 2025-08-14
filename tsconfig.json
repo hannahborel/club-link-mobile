@@ -6,14 +6,27 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "jsx": "react-jsx",
-    "allowJs": false,
+    "allowJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
+
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": true
   },
+  "include": [
+    "src/**/*",
+    "app/**/*",
+    "components/**/*",
+    "screens/**/*",
+    "utils/**/*",
+    "types/**/*",
+    "*.ts",
+    "*.tsx",
+    "App.tsx"
+  ],
   "exclude": ["node_modules", "dist", "build", ".next", "out"]
 }
