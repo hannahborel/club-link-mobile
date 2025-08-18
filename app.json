@@ -15,7 +15,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.clublink.mobile"
+      "bundleIdentifier": "com.clublink.mobile",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -30,8 +33,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"
+        "projectId": "3b7d1e30-cae3-44cb-90c7-eacaff8df75e"
       }
-    }
+    },
+    "owner": "heborel"
   }
 }
